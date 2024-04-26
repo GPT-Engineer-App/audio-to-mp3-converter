@@ -29,14 +29,14 @@ const Index = () => {
   return (
     <Container centerContent p={8}>
       <Heading mb={6}>Audio to MP3 Converter</Heading>
-      <Box textAlign="center" p={5} borderWidth="1px" borderRadius="lg">
+      <Box textAlign="center" p={5} borderWidth="1px" borderRadius="lg" bg="gray.50">
         <Text fontSize="lg" mb={3}>
           Convert your audio files to MP3 format easily.
         </Text>
+        <Input id="fileInput" type="file" accept="audio/*" onChange={handleFileChange} p={2} mb={3} />
         <Button leftIcon={<FaFileUpload />} colorScheme="blue" onClick={handleUploadClick}>
           Upload Audio File
         </Button>
-        <Input id="fileInput" type="file" accept="audio/*" hidden onChange={handleFileChange} />
       </Box>
       <Box mt={10}>
         <Text fontSize="xs">Supported formats include WAV, AAC, and more.</Text>
